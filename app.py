@@ -13,12 +13,11 @@ def index():
    return render_template("index.html", mars=mars)
 
 # Set up scraping route
-@app.route("/scrape")
+@app.route("/scraping")
 def scrape():
-   mars = mongo.db.mars
    mars_data = scraping.scrape_all()
    # Update database
-   mars.update_one({}, {"$set":mars_data}, upsert=True)
+   mars.update({}, mars_data, upsert=True)
    # Redirect after scraping the data
    return redirect('/', code=302)
 
