@@ -90,10 +90,10 @@ def hemisphere(browser):
     url = 'https://marshemispheres.com/'
     browser.visit(url)
 
-# 2. Create a list to hold the images and titles.\n",
+# 2. Create a list to hold the images and titles.
     hemisphere_image_urls = []
 
-# 3. Write code to retrieve the image urls and titles for each hemisphere.\n",
+# 3. Write code to retrieve the image urls and titles for each hemisphere.
     links = browser.find_by_css('a.product-item img')
 
     for i in range(len(links)):
