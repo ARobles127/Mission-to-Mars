@@ -118,7 +118,8 @@ def hemisphere(browser):
         browser.back()
         
         # 4. Print the list that holds the dictionary of each image url and title.
-        return hemisphere_image_urls
+        # print(hemisphere_image_urls)
+    return hemisphere_image_urls
 
 if __name__ == "__main__":
     # If running as script, print scraped data
